@@ -31,9 +31,9 @@ function updateLocalStorage(){
   localStorage.setItem('tasks',JSON.stringify(tasks))
 }
 function filterTask(){
-  anticipatedTask = tasks.length && tasks.filter((item)=>item.color=="var(--anticipated-color)")
-  progressTask = tasks.length && tasks.filter((item)=>item.color=="var(--progress-color)")
-  completedTask = tasks.length && tasks.filter((item)=>item.color=="var(--completed-color)")
+  let anticipatedTask = tasks.length && tasks.filter((item)=>item.color=="var(--anticipated-color)")
+  let progressTask = tasks.length && tasks.filter((item)=>item.color=="var(--progress-color)")
+  let completedTask = tasks.length && tasks.filter((item)=>item.color=="var(--completed-color)")
   tasks=[...progressTask,...anticipatedTask,...completedTask]
 }
 function fillContent(search_text){
