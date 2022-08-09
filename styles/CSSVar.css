@@ -1,0 +1,16 @@
+:root {
+    --main-color: #f4681d;
+    --main-bg-color: #f4681d;
+    --imgColor: red;
+    --todo-bg-color: rgb(255, 255, 255);
+    --setting-bg-color: rgb(255, 246, 223);
+    --anticipated-color: #767171;
+    --progress-color: #68aeac;
+    --completed-color: #00b050;
+    --borderColor:rgb(255, 190, 105);
+    --borderbtnColor: rgb(255, 255, 255);
+    --headColor:rgb(255, 190, 105);
+    --textColor:rgb(0, 0, 0);
+    --textTask:24px;
+    --textInput: 18px;
+  }

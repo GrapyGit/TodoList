@@ -1,0 +1,205 @@
+body{
+    width: 100%;
+    overflow:hidden;
+    scrollbar-color: var(--main-color);
+    scrollbar-width: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;   
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1,p,input,img,div{
+    margin:0%;
+}
+.TOdO{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-column: 3;
+    grid-template-columns: auto 2px 1fr;
+    grid-template-rows: 100%;
+}
+
+#todo{
+    width: 30vw;
+    min-width: 12vw;
+    max-width: 80vw;
+    background-color: var(--todo-bg-color);
+}
+#todosetings{
+width: 100%;
+background-color: var(--setting-bg-color);
+margin: 0 auto;
+overflow: overlay;
+}
+#todosetings p{
+ font-size: var(--textTask);
+ color: var(--textColor);
+}
+#info{
+    min-height: 300px;
+    margin-left: 5%;
+    width: 50%;
+    height: 30%;
+    display: none;
+    grid-row-gap: 10%;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 40% 20% 20%; 
+    justify-content: center;             
+}
+#info p{
+    margin-bottom: 1%;
+}
+#Name{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-size: var(--textInput);
+}
+#progress{
+    font-size: var(--textInput);
+    padding-left: 10px;
+    border-radius: 10px;
+    width: 30%;
+    height: 50%;
+}
+#progress:focus,#Name:focus,#text:focus{
+    border: solid 2px var(--main-bg-color);
+}
+.task{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    padding: 5px 10px 5px 10px;
+    border-bottom:  solid 1px var(--borderColor);
+    color: var(--textColor);
+    overflow: hidden;
+    transition: height 500ms ease;
+}
+.task img{
+    width: 30px;
+    height: 30px;
+}
+.task p{
+    white-space:nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    width: 90%;
+    font-size: var(--textTask);
+}   
+#taskList{
+    height: calc(100% - 120px);
+    overflow: overlay;
+  }
+#taskList:hover::-webkit-scrollbar-thumb,#todosetings:hover::-webkit-scrollbar-thumb{ 
+    background-color: var(--main-color);
+}
+#taskList::-webkit-scrollbar,#todosetings::-webkit-scrollbar{
+width: 0.8vw;
+opacity: 0;
+}
+#taskList::-webkit-scrollbar-thumb,#todosetings::-webkit-scrollbar-thumb{
+border-radius: 9em;
+}    
+h1{
+    color: var(--headColor);
+    font-size: 40px;
+    width: 100%;
+}
+.heading{
+    width: 100%;
+    display: grid;
+    grid-column: 2;
+    padding: 10px 0px 10px 0px;
+    grid-template-columns: auto  1fr;
+    justify-items:end;
+    align-items: center;
+}
+.heading h1{
+    padding-right: 10px;
+    padding-left: 8px;
+    width: auto;
+    display: inline-block;
+}
+.heading img{
+    padding-right: 8px;
+    width: 40px;
+    transition: 0.5s;
+    filter: saturate(100%);
+}
+.heading img:hover{
+    filter: saturate(1000%);
+  }
+.search{
+    margin-bottom: 10px;
+}
+.search form {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .search input, #progress, #Name,#text{
+    border: none;
+    outline: none;
+  }
+  .search input {
+    width: 100%;
+    height: 42px;
+    background: #F9F0DA;
+    padding-left: 10px;
+  }
+  .search img {
+    overflow: hidden;
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #btn,#btn1{
+    display: inline;
+    width: auto;
+    border:  solid 2px var(--borderbtnColor);
+    padding: 15px;
+    background: var(--main-color);
+    color:var(--textColor);
+    border-radius: 8px;
+    font-size: var(--textTask);
+    transition: 0.5s; 
+}
+  #btn:hover,#btn1:hover{
+    background: var(--imgColor);
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  #text{
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    resize: none;
+    font-size: var(--textInput);
+    padding: 10px 5px 0px 10px;
+    border-radius: 15px;
+  }

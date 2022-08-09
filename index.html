@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>ToDoList</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles/CSSVar.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="TOdO">
+            <div id ="todo">
+                <div class="heading">
+                    <h1>Cписок задач:</h1>
+                    <img onclick="redacListTodo()" src="img/plus.png">
+                </div>
+                <div class="search">
+                    <form>
+                        <input type="text" id="search" placeholder="поиск задачи"/>
+                        <img src="img/cross.png" id ="clearSearch">
+                    </form>
+                </div>
+                <div id ="taskList">
+            
+            </div>
+            </div>
+            <div style="cursor: col-resize; width: 100%;height: 100%; background-color: var(--headColor);" onmousedown="hook(event)"></div>
+            <div id ="todosetings">
+                <h1 style="text-align:center; margin-top:20px;">Редактирование задач:</h1>
+                <div style="width: 100%; height: 90%; display: flex; justify-content: center; align-items:center ;">
+                <p id="hint">Нажми + ,чтоб создать новую задачу или кликни по задаче, чтобы редактировать её.</p>
+                <div id="info">
+                <div><p>Название задачи:</p><input type="text" id="Name"/></div>
+                <div><p>Описание задачи:</p><textarea id="text" атрибуты></textarea></div>
+                <div><p>Состояние задачи:</p><select size="1"  id="progress">
+                    <option style="color:var(--anticipated-color)" value="var(--anticipated-color)">ожидает</option>
+                    <option style="color:var(--progress-color)" value="var(--progress-color)">в процессе</option>
+                    <option style="color:var(--completed-color)" value="var(--completed-color)">выполнена</option>
+                   </select></div>
+                <div class="buttons">
+                    <div id="btn1" onclick="clearInfo('')">Отменить</div>
+                    <div id="btn">Изменить</div>
+                </div> 
+                </div> 
+                </div>
+            </div>
+        </div>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
