@@ -26,7 +26,6 @@ function clearSearch(){
   fillContent(search.value)
   btnclearsearch.style.display="none"
 }
-
 function updateLocalStorage(){
   localStorage.setItem('tasks',JSON.stringify(tasks))
 }
