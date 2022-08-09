@@ -38,9 +38,9 @@ function filterTask(){
 }
 function fillContent(search_text){
   content.innerHTML=""
-  filterTask()
   let visible=1;
   if (tasks.length>0){
+     filterTask()
     tasks.forEach((item,index)=>{
     if(search_text && item.name.search(search_text)==-1) visible=0
       content.innerHTML+=creatTodo(item,index,visible)
