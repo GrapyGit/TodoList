@@ -12,7 +12,7 @@
             <div id ="todo">
                 <div class="heading">
                     <h1>Cписок задач:</h1>
-                    <img onclick="redacListTodo()" src="img/plus.png">
+                    <img onclick="redactListTodo()" src="img/plus.png">
                 </div>
                 <div class="search">
                     <form>
@@ -24,7 +24,7 @@
             
             </div>
             </div>
-            <div style="cursor: col-resize; width: 100%;height: 100%; background-color: var(--headColor);" onmousedown="hook(event)"></div>
+            <div class="resizes" onmousedown="hook(event)"></div>
             <div id ="todosetings">
                 <h1 style="text-align:center; margin-top:20px;">Редактирование задач:</h1>
                 <div style="width: 100%; height: 90%; display: flex; justify-content: center; align-items:center ;">
@@ -38,7 +38,7 @@
                     <option style="color:var(--completed-color)" value="var(--completed-color)">выполнена</option>
                    </select></div>
                 <div class="buttons">
-                    <div id="btn1" onclick="clearInfo('')">Отменить</div>
+                    <div id="btn1" onclick="settingInfo('')">Отменить</div>
                     <div id="btn">Изменить</div>
                 </div> 
                 </div> 
@@ -47,4 +47,4 @@
         </div>
         <script src="scripts/script.js"></script>
     </body>
-</html>
+</html> 
